@@ -1,0 +1,66 @@
+[
+  {
+    "ContainingType": "DbOperationsWithEFCoreApp.API.Controllers.AppointmentController",
+    "Method": "Provider",
+    "RelativePath": "api/Appointment/doctor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clinic_Code",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationsWithEFCoreApp.API.Controllers.AppointmentController",
+    "Method": "GetLocations",
+    "RelativePath": "api/Appointment/drLocation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clinic_Code",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationsWithEFCoreApp.API.Controllers.AppointmentController",
+    "Method": "GetTimeSlots",
+    "RelativePath": "api/Appointment/GettimeSlots",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "timeSlotsRequest",
+        "Type": "DbOperationsWithEFCoreApp.Core.Entities.TimeSlotsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationsWithEFCoreApp.API.Controllers.AppointmentController",
+    "Method": "GetReasons",
+    "RelativePath": "api/Appointment/reasons",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clinic_Code",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,157 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "DbOperationsWithEFCoreApp",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Appointment/doctor": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "parameters": [
+          {
+            "name": "clinic_Code",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/drLocation": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "parameters": [
+          {
+            "name": "clinic_Code",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/reasons": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "parameters": [
+          {
+            "name": "clinic_Code",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/GettimeSlots": {
+      "post": {
+        "tags": [
+          "Appointment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TimeSlotsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TimeSlotsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TimeSlotsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TimeSlotsRequest": {
+        "required": [
+          "clinicCode",
+          "doctorsCode",
+          "locationCode",
+          "patientAccount",
+          "patientTimeZone"
+        ],
+        "type": "object",
+        "properties": {
+          "clinicCode": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "doctorsCode": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "locationCode": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientAccount": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "patientTimeZone": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "isTelehealth": {
+            "type": "boolean"
+          },
+          "isFirstAvailable": {
+            "type": "boolean"
+          },
+          "reasonId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
